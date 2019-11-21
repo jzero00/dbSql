@@ -1,4 +1,3 @@
-//revised
 -- col IN (value1, value2...)
 -- col의 값이 IN 연산자 안에 나열된 값 중에 포함될 때 참으로 판정
 
