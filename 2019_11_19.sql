@@ -14,7 +14,8 @@ SELECT prod_id, prod_name
 FROM prod;
 
 --현재 접속한 계정에서 생성되어있는 테이블 목록을 조회
-SELECT USER_TABLES;
+SELECT *
+FROM USER_TABLES;
 
 --테이블의 컴럼 리스트 조회
 SELECT *

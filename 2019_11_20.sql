@@ -29,7 +29,7 @@ FROM users;
 -- 숫자 상수, 문자열 상수 ( oracle : '', java : '', "")
 -- table에 없는 값을 임의로 컬럼으로 생성
 -- 숫자에 대한 연산  (+, -, *, /)
--- 문자에 대한 연산 ( +가 존재하지 않음 , ==> || )
+-- 문자에 대한 연산 ( +가 존재하지 않음 , → || )
 SELECT (10-2)*2, 'DB SQL 수업',
         /*userid '_modified' , 문자열 연산은 더하기 연산이 없다.*/
         usernm || '_modified' usernm, reg_dt
