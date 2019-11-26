@@ -170,6 +170,22 @@ SELECT empno, ename, job, sal,
 FROM emp;
 
 --과제 실습 1,2번
+SELECT  empno, ename, deptno,
+        DECODE( deptno, 10, 'ACCOUNTING',
+                        20, 'RESEARCH'  ,
+                        30, 'SALES'     ,
+                        40, 'OPERATIONS',
+                            'DDIT') dname
+FROM emp;
+
+
+SELECT  empno, ename, hiredate, TO_CHAR(hiredate, 'YYYY') yr
+/*        CASE
+            WHEN  MODE( yr, 2) = 0 THEN '건강검진 대상자'
+            ELSE '건강검진 비대상자'
+        END*/
+FROM emp;
+
 
 
 
