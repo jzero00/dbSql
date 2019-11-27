@@ -187,14 +187,15 @@ SELECT  empno, ename, hiredate
         END
 FROM emp;
 
-SELECT  empno, ename, hiredate
-        ,DECODE (hiredate, MODE (hiredate, 'YYYY')%2 = 0
-            WHEN  dd= 0 THEN '건강검진 대상자'
+SELECT  empno, ename, hiredate,
+        CASE
+            WHEN 
+                MOD(TO_CHAR(hiredate, 'YYYY') , 2) = 
+                MOD(TO_CHAR(SYSDATE, 'YYYY') , 2)
+            THEN '건강검진 대상자'
             ELSE '건강검진 비대상자'
-        END
+        END contact_to_doctor
 FROM emp;
-
-
 
 
 
