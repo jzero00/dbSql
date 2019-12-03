@@ -151,8 +151,11 @@ nvl(cycle.day,0) day, COUNT(cid) cnt
 FROM cycle, product, customer
 WHERE cycle.pid (+) = product.pid
 AND cycle.cid (+) = 1
-AND cycle.cid = customer.cid
-GROUP BY cycle.pid, product.pnm, cid, cycle.day, nvl(product.pid,200)
+AND cycle.pid = customer.pid
+GROUP BY  pid,
+product.pnm, cid,
+product.pnm,
+ day,
 ORDER BY pid;
 
 
