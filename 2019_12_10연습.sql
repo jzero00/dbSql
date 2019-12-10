@@ -75,8 +75,13 @@ FROM dept_test;
 INSERT INTO dept_test VALUES (1, 'DDIT', 'daejeon');
 
 --p24
+DROP TABLE emp_test;
 CREATE TABLE emp_test (
         empno NUMBER (4,0) PRIMARY KEY,
         ename VARCHAR2(10),
         deptno NUMBER(2,0) REFERENCES dept_test (deptno)
         );
+    
+INSERT INTO emp_test VALUES (1000, 'brwon', 1);
+INSERT INTO emp_test VALUES (1001, 'cony', 2);  --¿Ö ¿¡·¯¶ßÁö??
+
