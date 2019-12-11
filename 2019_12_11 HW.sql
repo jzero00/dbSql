@@ -36,6 +36,8 @@ CREATE TABLE job_history (
         CONSTRAINT fk_job_his_jobs FOREIGN KEY (job_id) REFERENCES jobs (job_id)
 );
 
+---여기까지 완료★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆
+
 CREATE TABLE employees(
         employee_id NUMBER(6) CONSTRAINT pk_employees PRIMARY KEY,
         first_name VARCHAR2(20),
@@ -52,8 +54,6 @@ CREATE TABLE employees(
        CONSTRAINT fk_emp_dep_department_id FOREIGN KEY (department_id) REFERENCES department (department_id) 
        --나중에 ALTER로 바꿔보기
 );
----여기까지 완료★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆
-
 
 CREATE TABLE department(
         department_id NUMBER(4) CONSTRAINT pk_department PRIMARY KEY,
