@@ -23,16 +23,17 @@ CREATE TABLE locations (
 
 CREATE TABLE jobs (
         job_id VARCHAR2(10) PRIMARY KEY,
-        job_title VARCHAR2(35),
+        job_title VARCHAR2(35) NOT NULL,
         min_salary NUMBER(6),
         max_salary NUMBER (6)
 );
 
 CREATE TABLE job_history (
-        employee_id NUMBER(6),
-        start_date DATE CONSTRAINT pk_job_history PRIMARY KEY,
-        end_date DATE,
-        job_id VARCHAR2(10),
+        employee_id NUMBER(6), 
+        start_date DATE,
+        end_date DATE NOT NULL,
+        job_id VARCHAR2(10) NOT NULL,
+        CONSTRAINT pk_job_history PRIMARY KEY (employee_id, start_date),
         CONSTRAINT fk_job_his_jobs FOREIGN KEY (job_id) REFERENCES jobs (job_id)
 );
 
@@ -41,27 +42,27 @@ CREATE TABLE job_history (
 CREATE TABLE employees(
         employee_id NUMBER(6) CONSTRAINT pk_employees PRIMARY KEY,
         first_name VARCHAR2(20),
-        last_name VARCHAR2(25),
-        email VARCHAR2(25),
+        last_name VARCHAR2(25) NOT NULL,
+        email VARCHAR2(25) NOT NULL,
         phone_number VARCHAR2(20),
-        hiredate DATE,
-        job_id VARCHAR2(10),
+        hiredate DATE NOT NULL,
+        job_id VARCHAR2(10) NOT NULL,
         salary NUMBER (8,2),
         commission_pct NUMBER (8,2),
         manager_id NUMBER(6),
        department_id NUMBER(4),
-       CONSTRAINT fk_emp_job_job_id FOREIGN KEY (job_id) REFERENCES jobs (job_id),
-       CONSTRAINT fk_emp_dep_department_id FOREIGN KEY (department_id) REFERENCES department (department_id) 
-       --나중에 ALTER로 바꿔보기
+       CONSTRAINT fk_emp_job_job_id FOREIGN KEY (job_id) REFERENCES jobs (job_id)
 );
-
-
 
 CREATE TABLE department(
         department_id NUMBER(4) CONSTRAINT pk_department PRIMARY KEY,
-        department_name VARCHAR2(30),
+        department_name VARCHAR2(30) NOT NULL,
         manager_id NUMBER(6),
         location_id NUMBER(4),
-        CONSTRAINT fk_dep_emp_emp_id FOREIGN KEY (employee_id) REFERENCES employees (employee_id),
         CONSTRAINT fk_dep_loc_loc_id FOREIGN KEY (location_id) REFERENCES locations (location_id)
         );
+DROP TABLE department;
+       
+--ALTER 
+        ALTER TABLE department ADD CONSTRAINT fk_dep_department FOREIGN KEY (employee_id) REFERENCES employees (employee_id);
+        ALTER TABLE department ADD CONSTRAINT fk_emp_dep_dep_id FOREIGN KEY (department_id) REFERENCES department (department_id);
