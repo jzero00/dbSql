@@ -48,8 +48,8 @@ CREATE TABLE employees(
         commission_pct NUMBER (8,2),
         manager_id NUMBER(6),
        department_id NUMBER(4),
-       CONSTRAINT fk_emp_job_job_id FOREIGN KEY (job_id) REFERENCES jobs (job_id)
-       --CONSTRAINT fk_emp_dep_department_id FOREIGN KEY (department_id) REFERENCES department (department_id) 
+       CONSTRAINT fk_emp_job_job_id FOREIGN KEY (job_id) REFERENCES jobs (job_id),
+       CONSTRAINT fk_emp_dep_department_id FOREIGN KEY (department_id) REFERENCES department (department_id) 
        --나중에 ALTER로 바꿔보기
 );
 ---여기까지 완료★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆
