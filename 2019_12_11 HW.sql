@@ -61,8 +61,7 @@ CREATE TABLE department(
         location_id NUMBER(4),
         CONSTRAINT fk_dep_loc_loc_id FOREIGN KEY (location_id) REFERENCES locations (location_id)
         );
-DROP TABLE department;
-       
+
 --ALTER 
         ALTER TABLE department ADD CONSTRAINT fk_dep_department FOREIGN KEY (employee_id) REFERENCES employees (employee_id);
         ALTER TABLE department ADD CONSTRAINT fk_emp_dep_dep_id FOREIGN KEY (department_id) REFERENCES department (department_id);
