@@ -136,7 +136,7 @@ AND ename LIKE 'J%';
 SELECT *
 FROM TABLE (dbms_xplan.display);
 
---JOIN 쿼리어세의 인덱스
+--JOIN 쿼리에서의 인덱스
 --emp 테이블은 empno 컬럼으로 PRIMARY KEY 제약조건이 존재
 --dept 테이블은 deptno 컬럼으로 PRIMARY KRY 제약조건이 존재
 --emp 테이블은 PRIMARY KEY 제약을 삭제한 상태이므로 재생성
