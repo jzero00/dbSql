@@ -131,9 +131,15 @@ FROM
                                         
                                         END iw_mod
             FROM dual
-            CONNECT BY LEVEL <= TO_CHAR( LAST_DAY ( TO_DATE (:yyyymm, 'YYYYMM')), 'DD'));
+            CONNECT BY LEVEL <= TO_NUMBER( LAST_DAY ( TO_DATE (:yyyymm, 'YYYYMM')), 'DD')) + (35 - TO_NUMBER( LAST_DAY ( TO_DATE (:yyyymm, 'YYYYMM')), 'DD'))
+            );
 GROUP BY iw_mod
 ORDER BY iw_mod;
+
+--201912 : 35
+--202008 : 42
+
+
 
 SELECT *
 FROM sales;
