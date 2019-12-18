@@ -186,14 +186,15 @@ CONNECT BY PRIOR seq = parent_seq
 ORDER SIBLINGS BY seq DESC;
 
 h9
-SELECT seq, LPAD ( ' ' , 10 * (LEVEL - 1 ) ) || title AS title, LEVEL
+
+SELECT seq, LPAD ( ' ' , 10 * (LEVEL - 1 ) ) || title AS title, CONNECT_BY_ROOT(seq) s_root
 FROM board_test
 START WITH parent_seq IS NULL
 CONNECT BY PRIOR seq = parent_seq
-ORDER SIBLINGS BY seq DESC ;
+ORDER BY s_root DESC, seq ASC ;
 
-SELECT *
-FROM board_test
+SELECT CONNECT_BY _ROOT (seq)
+FROM board_test;
 
 
 
