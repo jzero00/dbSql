@@ -121,6 +121,7 @@ CONNECT BY PRIOR s_id = ps_id;
 SELECT *
 FROM no_emp;
 
+hr5
 SELECT LPAD ( ' ' , (LEVEL - 1 ) * 10 ) || org_cd  AS org_cd, no_emp
 FROM no_emp
 START WITH org_cd = 'XX회사'
@@ -196,7 +197,9 @@ ORDER BY s_root DESC, seq ASC ;
 SELECT CONNECT_BY _ROOT (seq)
 FROM board_test;
 
-
+--사원이름, 사원번호, 전체직원 건수
+SELECT COUNT(*)
+FROM emp;
 
 
 
