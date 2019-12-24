@@ -99,17 +99,18 @@ BEGIN
 
 exec printemp(7788);
 
+
+--pro_2
 CREATE OR REPLACE PROCEDURE registdept_test
 (   p_deptno IN dept.deptno %TYPE ,
     p_dname IN dept.dname %TYPE,
     p_loc IN dept.loc %TYPE)
 IS
-
 deptno dept.deptno %TYPE;
 dname dept.dname %TYPE;
 loc dept.loc %TYPE;
-BEGIN
 
+BEGIN
 INSERT INTO dept_test VALUES (p_deptno, p_dname, p_loc);
 COMMIT;
 
