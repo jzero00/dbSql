@@ -1,15 +1,15 @@
-?--table space 积己
+--table space 积己
 SELECT *
 FROM DBA_DATA_FILES;
 
 CREATE TABLESPACE TS_DBSQL
-DATAFILE 'C:\oraclexe\app\oracle\oradata\XE\TS_DBSQL.DBF' 
+DATAFILE 'E:\B_Util\4.Oracle\app\oracle\oradata\XE\TS_DBSQL.DBF' 
 SIZE 100M 
 AUTOEXTEND ON;
 
 
 --荤侩磊 眠啊
-create user zero identified by java
+create user java identified by java
 default tablespace TS_DBSQL
 temporary tablespace temp
 quota unlimited on TS_DBSQL
@@ -17,4 +17,4 @@ quota 0m on system;
 
 
 --立加, 积己鼻茄
-GRANT CONNECT, RESOURCE TO zero;
+GRANT CONNECT, RESOURCE TO java;
