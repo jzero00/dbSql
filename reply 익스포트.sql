@@ -1,5 +1,5 @@
 --------------------------------------------------------
---  파일이 생성됨 - 목요일-4월-23-2020   
+--  파일이 생성됨 - 월요일-4월-27-2020   
 --------------------------------------------------------
 --------------------------------------------------------
 --  DDL for Table REPLY
@@ -19,12 +19,11 @@
   TABLESPACE "TS_DBSQL" ;
 REM INSERTING into JAVA.REPLY
 SET DEFINE OFF;
-Insert into JAVA.REPLY (RNO,BNO,REPLYTEXT,REPLYER,REGDATE,UPDATEDATE) values (128,166,'test','mama',to_date('20/04/23','YY/MM/DD'),to_date('20/04/23','YY/MM/DD'));
-Insert into JAVA.REPLY (RNO,BNO,REPLYTEXT,REPLYER,REGDATE,UPDATEDATE) values (129,166,'미미','mama',to_date('20/04/23','YY/MM/DD'),to_date('20/04/23','YY/MM/DD'));
 Insert into JAVA.REPLY (RNO,BNO,REPLYTEXT,REPLYER,REGDATE,UPDATEDATE) values (130,166,'띠로리?','mama',to_date('20/04/23','YY/MM/DD'),to_date('20/04/23','YY/MM/DD'));
 Insert into JAVA.REPLY (RNO,BNO,REPLYTEXT,REPLYER,REGDATE,UPDATEDATE) values (131,166,'하하하하하','mama',to_date('20/04/23','YY/MM/DD'),to_date('20/04/23','YY/MM/DD'));
 Insert into JAVA.REPLY (RNO,BNO,REPLYTEXT,REPLYER,REGDATE,UPDATEDATE) values (132,166,'사쿠라여?','hogu',to_date('20/04/23','YY/MM/DD'),to_date('20/04/23','YY/MM/DD'));
 Insert into JAVA.REPLY (RNO,BNO,REPLYTEXT,REPLYER,REGDATE,UPDATEDATE) values (133,166,'사장 나랑 바둑한판두세 내가 알려줄게~~','hogu',to_date('20/04/23','YY/MM/DD'),to_date('20/04/23','YY/MM/DD'));
+Insert into JAVA.REPLY (RNO,BNO,REPLYTEXT,REPLYER,REGDATE,UPDATEDATE) values (135,166,'코와이네... ','mama',to_date('20/04/27','YY/MM/DD'),to_date('20/04/27','YY/MM/DD'));
 Insert into JAVA.REPLY (RNO,BNO,REPLYTEXT,REPLYER,REGDATE,UPDATEDATE) values (0,85,'댓글입니다.','평경장',to_date('20/04/21','YY/MM/DD'),to_date('20/04/21','YY/MM/DD'));
 Insert into JAVA.REPLY (RNO,BNO,REPLYTEXT,REPLYER,REGDATE,UPDATEDATE) values (1,85,'댓글입니다.','평경장',to_date('20/04/21','YY/MM/DD'),to_date('20/04/21','YY/MM/DD'));
 Insert into JAVA.REPLY (RNO,BNO,REPLYTEXT,REPLYER,REGDATE,UPDATEDATE) values (2,85,'댓글입니다.','평경장',to_date('20/04/21','YY/MM/DD'),to_date('20/04/21','YY/MM/DD'));
