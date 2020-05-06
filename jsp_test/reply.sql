@@ -5,7 +5,7 @@
 --  DDL for Table REPLY
 --------------------------------------------------------
 
-  CREATE TABLE "JAVA"."REPLY" 
+  CREATE TABLE "ZERO"."REPLY" 
    (	"RNO" NUMBER, 
 	"BNO" NUMBER, 
 	"REPLYTEXT" VARCHAR2(600 BYTE), 

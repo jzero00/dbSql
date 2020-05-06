@@ -5,7 +5,7 @@
 --  DDL for Table MEMBER
 --------------------------------------------------------
 
-  CREATE TABLE "JAVA"."MEMBER" 
+  CREATE TABLE "MEMBER" 
    (	"ID" VARCHAR2(100 BYTE), 
 	"PWD" VARCHAR2(60 BYTE), 
 	"NAME" VARCHAR2(30 BYTE), 

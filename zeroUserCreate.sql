@@ -1,4 +1,4 @@
---table space »ý¼º
+--table space ï¿½ï¿½ï¿½ï¿½
 SELECT *
 FROM DBA_DATA_FILES;
 
@@ -8,13 +8,13 @@ SIZE 100M
 AUTOEXTEND ON;
 
 
---»ç¿ëÀÚ Ãß°¡
-create user java identified by java
+--ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
+create user spring identified by java
 default tablespace TS_DBSQL
 temporary tablespace temp
 quota unlimited on TS_DBSQL
 quota 0m on system;
 
 
---Á¢¼Ó, »ý¼º±ÇÇÑ
-GRANT CONNECT, RESOURCE TO java;
+--ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+GRANT CONNECT, RESOURCE TO spring;
