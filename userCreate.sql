@@ -1,17 +1,17 @@
---table space ?ƒ?„±
+--table space ?ï¿½ï¿½?ï¿½ï¿½
   CREATE TABLESPACE TS_DBSQL
    DATAFILE 'C:\oraclexe\app\oracle\oradata\XE\TS_201805F.DBF' 
    SIZE 100M 
-   AUTOEXTEND ON
+   AUTOEXTEND ON;
 
 
---?‚¬?š©? ì¶”ê?
-create user PC05 identified by java
+--?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½ ì¶”ï¿½?
+create user final identified by java
 default tablespace TS_DBSQL
 temporary tablespace temp
 quota unlimited on TS_DBSQL
 quota 0m on system;
 
 
---? ‘?†, ?ƒ?„±ê¶Œí•œ
-GRANT CONNECT, RESOURCE TO PC05;
+--?ï¿½ï¿½?ï¿½ï¿½, ?ï¿½ï¿½?ï¿½ï¿½ê¶Œí•œ
+GRANT CONNECT, RESOURCE TO final;
