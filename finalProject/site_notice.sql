@@ -33,3 +33,7 @@ WHERE sno = 5;
 SELECT *
 FROM site_board
 WHERE sno = 1;
+
+SELECT COUNT(*)
+FROM attachfile
+WHERE sno=27;
