@@ -45,3 +45,16 @@ FROM per_schedule;
 SELECT AVG(PROCESSPERCENT) totalpercent
 FROM per_schedule
 WHERE projectid = 1;
+
+--1번 프로젝트에 참여하는 멤버의 멤버별 평균 진행 상황(%)
+SELECT memberid, AVG(processpercent) avg
+FROM per_schedule
+WHERE projectid = 1
+GROUP BY memberid;
+
+--업무 완료 대기중인 리스트
+SELECT *
+FROM PER_SCHEDULE
+WHERE projectid=1
+AND processpercent = 100
+AND APPROVALYN = 'n';
